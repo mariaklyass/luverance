@@ -12,7 +12,7 @@ const CurrentAlbum = () => {
       <div className="section-current-album">
         <div className="current-album">
           <div>
-            <img src="public/images/album-cover.jpg"></img>
+            <img src="../../../images/album-cover.jpg"></img>
           </div>
         </div>
         <iframe

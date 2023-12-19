@@ -5,7 +5,10 @@ import SocialMedia from "../socialmedia/SocialMedia";
 const Footer = () => {
   return (
     <footer id="footer" className="footer">
-      <img className="footer-logo" src="public/images/footer-logo.jpg"></img>
+      <img
+        className="footer-logo"
+        src="../../../public/images/footer-logo.jpg"
+      ></img>
       <div>
         <p>Следить за новостями & слушать новую музыку:</p>
         <SocialMedia />
@@ -16,7 +19,7 @@ const Footer = () => {
           <h4>
             2023, Made by Klyass @mariaklyass{" "}
             <svg>
-              <use xlinkHref={`../public/icons/sprite.svg#github`}></use>
+              <use xlinkHref={`../../../public/icons/sprite.svg#github`}></use>
             </svg>{" "}
           </h4>
         </a>
