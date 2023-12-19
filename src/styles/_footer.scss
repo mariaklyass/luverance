@@ -1,0 +1,32 @@
+@use "variables" as *;
+@import "mixins";
+
+.socialmedia {
+  @include flex;
+  svg {
+    fill: $light;
+    width: 24px;
+    height: 24px;
+  }
+}
+.footer {
+  display: flex;
+  flex-shrink: 0;
+  height: 150px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 40px 10px;
+}
+
+.footer-logo {
+  height: 100px;
+}
+.madeby {
+  display: flex;
+  gap: 10px;
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: #e8e8e8;
+  }
+}

@@ -1,54 +1,33 @@
-import { useState, useEffect } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import { client } from "../client";
+import "../css/style.css";
+import { Route, Routes } from "react-router-dom";
+import Layout from "./Layout";
+import Home from "../src/pages/home/Home";
+import TourPage from "../src/pages/tour/TourPage";
+import Tracks from "../src/pages/tracks/Tracks";
+import Crew from "../src/pages/about/Crew";
+import News from "../src/pages/news/News";
+import Merch from "../src/pages/shop/Merch";
+import Contact from "../src/pages/contact/Contact";
 
-function App() {
-  const [count, setCount] = useState(0);
-  const [postData, setPostData] = useState(null);
-  useEffect(() => {
-    client
-      .fetch(
-        `*[_type == "post"]
-        {
-          title, 
-          'slug': slug.current
-  }
-  `
-      )
-      .then((data) => {
-        setPostData(data);
-      })
-      .catch(console.error);
-  }, []);
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <h2>
-        {postData && postData.map((post, i) => <div key={i}>{post.title}</div>)}
-      </h2>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  );
-}
+const App = () => (
+  <div className="app">
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="/tour" element={<TourPage />} />
+        {/* <Route path="/tour:prev" element={<PastTour />} /> */}
+        <Route path="/tracks" element={<Tracks />} />
+        {/* <Route path="/tracks:lyrics" element={<Lyrics />} />
+        <Route path="/tracks:albums" element={<Albums />} />
+        <Route path="/tracks:video" element={<Video />} /> */}
+        <Route path="/about" element={<Crew />} />
+        <Route path="/news" element={<News />} />
+        {/* <Route path="/news:id" element={<NewsArticle/>}/> */}
+        <Route path="/shop" element={<Merch />} />
+        <Route path="/contact" element={<Contact />} />
+      </Route>
+    </Routes>
+  </div>
+);
 
 export default App;

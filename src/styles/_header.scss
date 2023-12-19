@@ -1,0 +1,23 @@
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
+  background: rgba(1, 1, 1, 0.7);
+  backdrop-filter: blur(2px);
+  height: 160px;
+}
+
+.logo {
+  height: 100px;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 200px;
+  margin-bottom: 10px;
+  gap: 20px;
+  font-size: 28px;
+  opacity: 0.8;
+}

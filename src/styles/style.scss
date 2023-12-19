@@ -1,0 +1,15 @@
+@use "variables" as *;
+@use "mixins";
+@use "reset";
+@use "header";
+@use "footer";
+@use "home";
+
+//logo
+.logo {
+  display: flex;
+  justify-content: center;
+}
+.logo img {
+  max-height: 100px;
+}
