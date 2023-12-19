@@ -1,6 +1,6 @@
 import React from "react";
 import { SOCIALMEDIA } from "../../utils/constants";
-import Icon from "../Icon/Icon";
+import Icon from "../icon/Icon";
 
 const SocialMedia = () => (
   <ul className="socialmedia">
