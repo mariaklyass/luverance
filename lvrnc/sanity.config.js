@@ -5,7 +5,7 @@ import {schemaTypes} from './schemas'
 
 export default defineConfig({
   name: 'default',
-  title: 'studio',
+  title: 'lvrnc',
 
   projectId: 'lmlcsr2m',
   dataset: 'production',
