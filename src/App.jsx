@@ -1,11 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import { client } from "./client";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [count, setCount] = useState(0);
+  const [postData, setPostData] = useState(null);
+  useEffect(() => {
+    client
+      .fetch(
+        `*[_type == "post"]
+        {
+          title, 
+          'slug': slug.current
+  }
+  `
+      )
+      .then((data) => {
+        setPostData(data);
+      })
+      .catch(console.error);
+  }, []);
   return (
     <>
       <div>
@@ -17,6 +33,9 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+      <h2>
+        {postData && postData.map((post, i) => <div key={i}>{post.title}</div>)}
+      </h2>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
@@ -29,7 +48,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
