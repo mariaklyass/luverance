@@ -1,65 +1,70 @@
-import {defineField, defineType} from 'sanity'
-
-export default defineType({
+export default {
   name: 'post',
-  title: 'Post',
   type: 'document',
+  title: 'Пост (новость)',
   fields: [
-    defineField({
-      name: 'title',
-      title: 'Title',
+    {
+      name: 'meta_title',
       type: 'string',
-    }),
-    defineField({
+      title: 'Заголовок для вкладки',
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: 'title',
+      type: 'string',
+      title: 'Заголовок',
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: 'publishedDate',
+      type: 'date',
+      title: 'Дата публикации',
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: 'image',
+      type: 'image',
+      validation: (Rule) => Rule.required(),
+      title: 'Изображение',
+      fields: [
+        {
+          name: 'caption',
+          type: 'string',
+          validation: (Rule) => Rule.required(),
+          title: 'Подпись',
+        },
+      ],
+    },
+    {
       name: 'slug',
-      title: 'Slug',
+      title: 'Часть ссылки после "/". Название должно быть уникальным и только латиницей',
+      validation: (Rule) => Rule.required(),
       type: 'slug',
       options: {
-        source: 'title',
-        maxLength: 96,
+        // source: 'title',
+        maxLength: 200,
+        slugify: (input) => input.toLowerCase().replace(/\s+/g, '-').slice(0, 200),
       },
-    }),
-    defineField({
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: {type: 'author'},
-    }),
-    defineField({
-      name: 'mainImage',
-      title: 'Main image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    }),
-    defineField({
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
-    }),
-    defineField({
-      name: 'publishedAt',
-      title: 'Published at',
-      type: 'datetime',
-    }),
-    defineField({
+    },
+    {
+      name: 'description',
+      title: 'Аннотация',
+      type: 'text',
+      validation: (Rule) => Rule.required(),
+    },
+    {
       name: 'body',
-      title: 'Body',
-      type: 'blockContent',
-    }),
+      validation: (Rule) => Rule.required(),
+      title: 'Пост',
+      type: 'array',
+      of: [
+        {
+          type: 'block',
+        },
+        {
+          type: 'image',
+        },
+      ],
+    },
   ],
-
-  preview: {
-    select: {
-      title: 'title',
-      author: 'author.name',
-      media: 'mainImage',
-    },
-    prepare(selection) {
-      const {author} = selection
-      return {...selection, subtitle: author && `by ${author}`}
-    },
-  },
-})
+}
