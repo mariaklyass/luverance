@@ -5,7 +5,9 @@ import SocialMedia from "../socialmedia/SocialMedia";
 const Footer = () => {
   return (
     <footer id="footer" className="footer">
-      <img className="footer-logo" src="/images/footer-logo.jpg"></img>
+      <a href="https://band.link/luverance" target="_blank">
+        <img className="footer-logo" src="/images/footer-logo.jpg"></img>
+      </a>
       <div>
         <p>Следить за новостями & слушать новую музыку:</p>
         <SocialMedia />

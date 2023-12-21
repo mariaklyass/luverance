@@ -5,7 +5,7 @@ export const MENU = [
   },
   {
     name: "Творчество",
-    link: "tracks",
+    link: "albums",
   },
   {
     name: "О группе",

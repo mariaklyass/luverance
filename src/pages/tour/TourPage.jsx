@@ -3,9 +3,9 @@ import TourItems from "./TourItems";
 
 const TourPage = () => {
   return (
-    <div>
-      TourPage
+    <div className="tour-section-wrapper">
       <TourItems />
+      {/* if tab 'past' is active, show <PastTourItem/>? + tab with all items*/}
     </div>
   );
 };

@@ -1,7 +1,11 @@
 export const tourItemCollectionQuery = `
-*[_type == "post"]
+*[_type == "tour"]
 {
-  title,
-  'slug': slug.current
+  concertDate,
+  city,
+  location,
+  ticketLink,
+  soldOut,
+  eventReport
 }
 `;

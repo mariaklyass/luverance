@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import Layout from "./Layout";
 import Home from "../src/pages/home/Home";
 import TourPage from "../src/pages/tour/TourPage";
-import Tracks from "../src/pages/tracks/Tracks";
+import Albums from "../src/pages/tracks/Albums";
 import Crew from "../src/pages/about/Crew";
 import News from "../src/pages/news/News";
 import Merch from "../src/pages/shop/Merch";
@@ -17,7 +17,7 @@ const App = () => (
         <Route index element={<Home />} />
         <Route path="/tour" element={<TourPage />} />
         {/* <Route path="/tour:prev" element={<PastTour />} /> */}
-        <Route path="/tracks" element={<Tracks />} />
+        <Route path="/albums" element={<Albums />} />
         {/* <Route path="/tracks:lyrics" element={<Lyrics />} />
         <Route path="/tracks:albums" element={<Albums />} />
         <Route path="/tracks:video" element={<Video />} /> */}

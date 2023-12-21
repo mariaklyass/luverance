@@ -35,7 +35,7 @@ export default {
     },
     {
       name: 'soldOut',
-      title: 'Билеты еще можно купить?',
+      title: 'Билеты все распроданы?',
       type: 'boolean',
       validation: (Rule) => Rule.required(),
     },

@@ -13,8 +13,9 @@ export const getTourItems = createAsyncThunk(
     try {
       const data = await fetchSanityData(tourItemCollectionQuery);
       console.log("data", data);
-      const { items } = data.tourItemCollection?.items || [];
-      return items;
+      // const { items } = data.tourItemCollection?.items || [];
+      // return items;
+      return data;
     } catch (err) {
       return thunkAPI.rejectWithValue(err);
     }

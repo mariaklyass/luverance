@@ -1,0 +1,69 @@
+.tour-section-wrapper {
+  padding: 0 40px;
+}
+.section-concerts {
+  padding: 0 150px;
+  margin: 40px auto;
+  padding: 40px;
+  height: 70vh;
+  width: 100%;
+  font-size: 24px;
+  p {
+    font-size: 24px;
+  }
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.concerts-heading {
+  text-align: center;
+  font-size: 36px;
+}
+.concerts {
+  // display: flex;
+  // justify-content: flex-end;
+  // align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 50px;
+  gap: 50px;
+  video {
+    width: 100%;
+    height: 50vh;
+    flex: 1;
+    object-fit: cover;
+  }
+}
+.tour-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  flex: 1;
+}
+.tour-item {
+  // display: flex;
+  // flex: 1;
+  // gap: 100px;
+  // justify-content: flex-end;
+  // align-items: center;
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: 250px 80px 80px;
+  gap: 100px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+.soldout {
+  font-size: 24px;
+  background-color: rgba(74, 32, 32, 0.564);
+  padding: 5px;
+  border-radius: 5px;
+}
