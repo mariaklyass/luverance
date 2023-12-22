@@ -1,0 +1,18 @@
+.section-news {
+  padding: 40px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.news-piece {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.news-photo {
+  width: 600px;
+  max-width: 100%;
+  // position: absolute;
+  // clip: rect(50px, 250px, 150px, 50px);
+}

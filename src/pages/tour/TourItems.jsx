@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getTourItems } from "../../reducers/tourReducer";
 import TourItem from "./TourItem";
 import concertVideo from "/video/concert.mp4";
+import { sortByDate } from "../../utils/common";
 
 const TourItems = () => {
   const dispatch = useDispatch();
@@ -13,14 +14,15 @@ const TourItems = () => {
     dispatch(getTourItems());
   }, [dispatch]);
 
-  const currentConcerts = items
-    // .filter(({ soldOut, ticketLink }) => !soldOut && ticketLink)
-    // .filter((_, i) => i < 6);
-    .filter(
-      ({ ticketLink, concertDate }) =>
-        new Date(concertDate) > new Date() && ticketLink
-    )
-    .filter((_, i) => i < 6);
+  const currentConcerts = sortByDate(
+    items
+      .filter(
+        ({ ticketLink, concertDate }) =>
+          new Date(concertDate) > new Date() && ticketLink
+      )
+      .filter((_, i) => i < 6)
+  );
+
   const pastConcerts = items.filter(
     ({ soldOut, ticketLink }) => soldOut && ticketLink
   );

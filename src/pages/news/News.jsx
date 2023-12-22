@@ -1,7 +1,14 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { client } from "../../../client";
+import imageUrlBuilder from "@sanity/image-url";
+
 const News = () => {
+  const builder = imageUrlBuilder(client);
+  function urlFor(source) {
+    return builder.image(source);
+  }
+
   const [postData, setPostData] = useState(null);
   useEffect(() => {
     client
@@ -9,8 +16,11 @@ const News = () => {
         `*[_type == "post"]
         {
           title,
-          'slug': slug.current
-  }
+          publishedDate,
+          "image": image.asset->url,
+          body,
+         
+        } 
   `
       )
       .then((data) => {
@@ -20,12 +30,34 @@ const News = () => {
   }, []);
 
   return (
-    <>
-      <h2>
-        Test:
-        {postData && postData.map((post, i) => <div key={i}>{post.title}</div>)}
-      </h2>
-    </>
+    <section className="section-news">
+      <div>
+        {postData &&
+          postData.map((post, i) => (
+            <div key={i} className="news-piece">
+              <p>{post.publishedDate}</p>
+              {post.body.map((block, j) => (
+                <React.Fragment key={j}>
+                  {block._type === "block" && (
+                    <p>{block.children.map((child) => child.text).join("")}</p>
+                  )}
+                </React.Fragment>
+              ))}
+              <img
+                className="news-photo"
+                src={
+                  urlFor(post.image)
+                    // .url()
+                    .auto("format")
+                  // .fit("max")
+                  // .width(720)
+                  // .toString()}
+                }
+              ></img>
+            </div>
+          ))}
+      </div>
+    </section>
   );
 };
 

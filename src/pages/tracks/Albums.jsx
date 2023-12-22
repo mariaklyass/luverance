@@ -1,5 +1,5 @@
 import React from "react";
-import Tracks from "./Tracks";
+// import Tracks from "./Tracks";
 
 const Albums = () => {
   return (

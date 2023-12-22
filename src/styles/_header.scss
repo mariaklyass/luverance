@@ -13,11 +13,13 @@ header {
 }
 .menu {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 10px 200px;
   margin-bottom: 10px;
   gap: 20px;
+  width: 100%;
   font-size: 28px;
   opacity: 0.8;
   transition: background-color 0.5s ease;
