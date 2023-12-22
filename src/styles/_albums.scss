@@ -1,14 +1,36 @@
 .section-albums {
+  padding: 0 40px;
+  margin: 40px auto;
+  height: 100vh;
+  background: url("/images/tracks.jpg") no-repeat center center;
+  background-size: cover;
+  position: relative;
+  p {
+    font-size: 24px;
+  }
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 100px;
-  height: 80vh;
-  padding: 0 40px;
-  margin: 0 auto;
-  img {
-    margin: 40px;
-    max-width: 100%;
-    max-height: 600px;
+  gap: 50px;
+}
+
+.album-description {
+  display: grid;
+  gap: 25px;
+  h2,
+  h3,
+  div {
+    font-size: 30px;
+  }
+}
+.album-cover {
+  width: 50%;
+}
+.link {
+  cursor: pointer;
+  &:hover {
+    color: rgba(66, 157, 116, 0.5);
+    text-decoration: underline;
+    transition: all ease-in 0.5s;
   }
 }

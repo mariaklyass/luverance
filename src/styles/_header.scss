@@ -20,4 +20,13 @@ header {
   gap: 20px;
   font-size: 28px;
   opacity: 0.8;
+  transition: background-color 0.5s ease;
+}
+
+.active {
+  background-color: #e8e8e8;
+  padding: 10px;
+  border-radius: 5px;
+  color: #010101;
+  transition: all ease-in 0.5s;
 }
