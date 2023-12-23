@@ -16,7 +16,7 @@ const Footer = () => {
         {" "}
         <a href="https://github.com/mariaklyass" target="_blank">
           <h4>
-            2023, Made by Klyass @mariaklyass{" "}
+            2023, Made by @mariaklyass{" "}
             <svg>
               <use xlinkHref={`/icons/sprite.svg#github`}></use>
             </svg>{" "}

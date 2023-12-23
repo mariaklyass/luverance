@@ -1,4 +1,6 @@
 .section-news {
+  position: relative;
+  z-index: -1;
   padding: 40px;
   margin: 0 auto;
   height: 100vh;
@@ -11,8 +13,9 @@
 }
 
 .news-photo {
-  width: 600px;
-  max-width: 100%;
-  // position: absolute;
-  // clip: rect(50px, 250px, 150px, 50px);
+  max-width: 450px;
+  width: 100%;
+  // @media (max-width: 600px) {
+  //   width: 300px;
+  // }
 }

@@ -16,8 +16,8 @@ const CurrentAlbum = () => {
           </div>
         </div>
         <iframe
-          width="50%"
-          height="450"
+          width="100%"
+          height="550"
           src="https://music.yandex.ru/iframe/album/24092948"
         >
           Слушайте <a href="https://music.yandex.ru/album/24092948">Diade</a> —{" "}

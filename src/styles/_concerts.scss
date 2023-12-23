@@ -2,6 +2,8 @@
   padding: 0 40px;
 }
 .section-concerts {
+  position: relative;
+  z-index: -1;
   padding: 0 150px;
   margin: 40px auto;
   padding: 40px;
@@ -16,15 +18,15 @@
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+  @media (max-width: 1024px) {
+    height: 100vh;
+  }
 }
 .concerts-heading {
   text-align: center;
   font-size: 36px;
 }
 .concerts {
-  // display: flex;
-  // justify-content: flex-end;
-  // align-items: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 50px;
@@ -34,6 +36,9 @@
     height: 50vh;
     flex: 1;
     object-fit: cover;
+  }
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
   }
 }
 .tour-list {
@@ -47,11 +52,6 @@
   flex: 1;
 }
 .tour-item {
-  // display: flex;
-  // flex: 1;
-  // gap: 100px;
-  // justify-content: flex-end;
-  // align-items: center;
   max-width: 600px;
   display: grid;
   grid-template-columns: 250px 80px 80px;

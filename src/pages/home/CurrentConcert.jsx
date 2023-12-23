@@ -18,11 +18,9 @@ const CurrentConcert = () => {
       </div>
       <div className="wrapper">
         <h2>Для связи: </h2>
-        <div>
-          <p> MGMT Наташа Шавшина</p>
-          <p>
-            <span>Email: </span>mgmt.luverance@gmail.com
-          </p>
+        <div className="mgmt">
+          <p> Наташа Шавшина</p>
+          <p>mgmt.luverance@gmail.com</p>
         </div>
       </div>
     </section>
