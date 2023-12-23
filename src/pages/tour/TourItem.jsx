@@ -1,5 +1,5 @@
 import React from "react";
-import Icon from "../../components/icon/Icon";
+// import Icon from "../../components/icon/Icon";
 const TourItem = ({
   concertDate,
   city,
@@ -25,10 +25,11 @@ const TourItem = ({
 
       {!soldOut ? (
         <a href={ticketLink} target="_blank">
-          <>
+          <div className="tickets">
             <span>Билеты</span>
-            <Icon name="arrow-right" />
-          </>
+            {/* <Icon name="arrow-right" /> */}
+            <span>&rarr;</span>
+          </div>
         </a>
       ) : (
         <button className="soldout">SOLD OUT</button>

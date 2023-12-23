@@ -6,7 +6,8 @@ header {
   background: rgba(1, 1, 1, 0.7);
   backdrop-filter: blur(2px);
   height: 160px;
-  // position: relative;
+  position: relative;
+  z-index: 1;
 }
 
 .logo {
@@ -41,46 +42,141 @@ header {
 //burger
 @media (max-width: 768px) {
   .menu-toggle {
-    position: relative;
-    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateY(100px) translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #010101;
+    padding: 10px;
     cursor: pointer;
-    font-size: 20px; /* Adjust the font size as needed */
-    margin-right: 15px; /* Adjust the margin as needed */
-    color: #ffffff; /* Change the color as needed */
+    font-size: 40px;
+    color: #e8e8e8;
+    opacity: 0.8;
     z-index: 5;
+    border: 1px solid #e8e8e862;
+    border-radius: 100%;
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
+    // &__glow1,
+    // &__glow2 {
+    //   content: "";
+    //   position: absolute;
+    //   height: 110%;
+    //   width: 110%;
+    //   border-radius: 50%;
+    //   opacity: 0.5;
+    //   filter: blur(60px);
+    // }
+
+    // &__glow1 {
+    //   background-color: #ff0072;
+    //   z-index: -2;
+    //   transform: translate(16.5%, 16.5%);
+    // }
+
+    // &__glow2 {
+    //   background-color: #00ffff;
+    //   z-index: -1;
+    //   transform: translate(-16.5%, -16.5%);
+    // }
   }
 
   .menu-toggle:hover {
-    color: #ffffff; /* Change the color on hover as needed */
+    color: #e8e8e8; /* Change the color on hover as needed */
+  }
+  .menu-toggle__content {
+    transition: 0.7s ease-out;
   }
 
   .menu {
     display: none;
+    padding: 10px 40px;
   }
 
   .menu.show {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
+    gap: 20px;
     position: absolute;
-    top: 100px; /* Adjust the top spacing as needed */
+    top: 150px;
+    margin-top: 10px;
+    padding-top: 40px;
     left: 0;
     width: 100%;
-    background-color: #000000; /* Change the background color as needed */
+    height: 125vh;
+    background-color: #010101;
     z-index: 5;
-    opacity: 1;
+    opacity: 0;
+    animation: 1s appear forwards;
   }
 
   .menu a {
     padding: 15px 0;
-    color: #ffffff; /* Change the text color as needed */
     text-decoration: none;
     text-align: center;
-    width: 100%;
+    width: 50%;
     transition: color 0.3s ease;
+  }
+  .active.menu-item a {
+    color: #010101;
   }
 
   .menu a:hover {
     color: #ff0000; /* Change the text color on hover as needed */
+  }
+}
+
+// menu mobile
+.menuItem {
+  font-size: 1.2rem;
+  padding: 1rem 0;
+  margin: 0 5%;
+  cursor: pointer;
+  // color: hover? 'gray':'#fafafa'
+  transition: color 0.2s ease-in-out;
+  animation: 0.5s slideIn forwards;
+  // animationDelay:this.props.delay,
+}
+.line {
+  width: 90%;
+  height: 1px;
+  background-color: gray;
+  margin: 0 auto;
+  padding-top: 15px;
+  animation: 0.5s shrink forwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-2%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes shrink {
+  0% {
+    width: 95%;
+  }
+  100% {
+    width: 90%;
   }
 }
