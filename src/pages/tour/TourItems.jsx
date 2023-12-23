@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getTourItems } from "../../reducers/tourReducer";
 import TourItem from "./TourItem";
@@ -29,8 +29,19 @@ const TourItems = () => {
   //const nextConcert = items.filter(({ soldOut, ticketLink }) => !soldOut && ticketLink).filter((_, i) => i=1);
   // to show only 1 next concert
 
-  console.log(currentConcerts);
-  console.log(pastConcerts);
+  //for conditonal video rendering
+  const [shouldShowVideo, setShouldShowVideo] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setShouldShowVideo(window.innerWidth > 768);
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div className="section-concerts">
@@ -44,9 +55,11 @@ const TourItems = () => {
               <TourItem {...item} i={i} key={i} />
             ))}
           </ul>
-          <video autoPlay loop>
-            <source src={concertVideo} type="video/mp4" />
-          </video>
+          {shouldShowVideo && (
+            <video autoPlay loop>
+              <source src={concertVideo} type="video/mp4" />
+            </video>
+          )}
         </div>
       )}
     </div>

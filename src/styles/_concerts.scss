@@ -4,7 +4,7 @@
 }
 .section-concerts {
   position: relative;
-  z-index: -1;
+  z-index: 1;
   padding: 0 150px;
   margin: 40px auto;
   padding: 40px;
@@ -26,6 +26,7 @@
 .concerts-heading {
   text-align: center;
   font-size: 36px;
+  line-height: 125%;
 }
 .concerts {
   display: grid;

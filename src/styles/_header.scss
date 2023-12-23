@@ -7,7 +7,7 @@ header {
   backdrop-filter: blur(2px);
   height: 160px;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .logo {
@@ -63,32 +63,10 @@ header {
       width: 32px;
       height: 32px;
     }
-    // &__glow1,
-    // &__glow2 {
-    //   content: "";
-    //   position: absolute;
-    //   height: 110%;
-    //   width: 110%;
-    //   border-radius: 50%;
-    //   opacity: 0.5;
-    //   filter: blur(60px);
-    // }
-
-    // &__glow1 {
-    //   background-color: #ff0072;
-    //   z-index: -2;
-    //   transform: translate(16.5%, 16.5%);
-    // }
-
-    // &__glow2 {
-    //   background-color: #00ffff;
-    //   z-index: -1;
-    //   transform: translate(-16.5%, -16.5%);
-    // }
   }
 
   .menu-toggle:hover {
-    color: #e8e8e8; /* Change the color on hover as needed */
+    color: #e8e8e8;
   }
   .menu-toggle__content {
     transition: 0.7s ease-out;
@@ -106,7 +84,7 @@ header {
     align-items: center;
     gap: 20px;
     position: absolute;
-    top: 150px;
+    top: 100%;
     margin-top: 10px;
     padding-top: 40px;
     left: 0;
@@ -143,7 +121,6 @@ header {
   // color: hover? 'gray':'#fafafa'
   transition: color 0.2s ease-in-out;
   animation: 0.5s slideIn forwards;
-  // animationDelay:this.props.delay,
 }
 .line {
   width: 90%;

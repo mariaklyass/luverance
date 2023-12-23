@@ -14,9 +14,9 @@ const Header = () => {
 
   //hover
   const [hover, setHover] = useState(false);
-  const handleHover = () => {
-    setHover(!hover);
-  };
+  // const handleHover = () => {
+  //   setHover(!hover);
+  // };
   //
   return (
     <header id="navbar" className="header">

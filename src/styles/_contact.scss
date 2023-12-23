@@ -1,15 +1,27 @@
 .section-contactform {
   position: relative;
-  z-index: -1;
+  z-index: 1;
   padding: 0 40px;
   margin: 40px auto;
-  height: 100vh;
+  height: 90vh;
   background: url("/images/contact.jpg") no-repeat center center;
   background-size: cover;
+  @media (max-width: 850px) {
+    height: 100vh;
+  }
+  @media (max-width: 420px) {
+    height: 130vh;
+  }
+  @media (max-width: 376px) {
+    height: 150vh;
+  }
 }
 
 .contact-form {
   width: 100vw;
+  @media (max-width: 567px) {
+    width: 100%;
+  }
   label {
     font-size: 24px;
   }
@@ -33,6 +45,7 @@
   }
   .form-title {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     gap: 20px;
     p {
@@ -57,11 +70,8 @@
   }
   .form {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    // display: flex;
-    // align-items: flex-start;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 40px;
-    // flex-direction: column;
     background: rgba(1, 1, 1, 0.7);
     backdrop-filter: blur(3px);
     margin-top: 100px;
@@ -70,6 +80,10 @@
     border-radius: 12px;
     @media (max-width: 750px) {
       max-width: 80%;
+    }
+    @media (max-width: 520px) {
+      padding: 20px;
+      max-width: 90%;
     }
     @media (min-width: 1440px) {
       grid-template-columns: 1fr;

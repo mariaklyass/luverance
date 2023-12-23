@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes, Link, useParams, Outlet } from "react-router-dom";
+import { Route, Routes, Link, useParams } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { tracks } from "../../utils/constants";
 

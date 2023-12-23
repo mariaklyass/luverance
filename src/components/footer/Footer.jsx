@@ -8,7 +8,7 @@ const Footer = () => {
       <a href="https://band.link/luverance" target="_blank">
         <img className="footer-logo" src="/images/footer-logo.jpg"></img>
       </a>
-      <div>
+      <div className="follow">
         <p>Следить за новостями & слушать новую музыку:</p>
         <SocialMedia />
       </div>

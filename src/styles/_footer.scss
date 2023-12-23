@@ -21,6 +21,19 @@
 .footer-logo {
   height: 100px;
 }
+
+.follow {
+  display: flex;
+  flex-direction: column;
+
+  p {
+    text-wrap: balance;
+  }
+  @media (max-width: 402px) {
+    align-items: flex-start;
+  }
+}
+
 .madeby {
   display: flex;
   gap: 10px;
