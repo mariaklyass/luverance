@@ -1,27 +1,24 @@
 import React from "react";
-// import Logo from "../Logo/Logo";
-import SocialMedia from "../socialmedia/SocialMedia";
+// import SocialMedia from "../socialmedia/SocialMedia";
 
 const Footer = () => {
   return (
     <footer id="footer" className="footer">
-      <a href="https://band.link/luverance" target="_blank">
-        <img className="footer-logo" src="/images/footer-logo.jpg"></img>
-      </a>
       <div className="follow">
-        <p>Следить за новостями & слушать новую музыку:</p>
-        <SocialMedia />
-      </div>
-      <div className="madeby">
-        {" "}
-        <a href="https://github.com/mariaklyass" target="_blank">
-          <h4>
-            2023, Made by @mariaklyass{" "}
-            <svg>
-              <use xlinkHref={`/icons/sprite.svg#github`}></use>
-            </svg>{" "}
-          </h4>
-        </a>
+        {/* <SocialMedia /> */}
+        <div className="socialmedia">
+          <a href="https://t.me/luverance" target="_blank">
+            <img src="/src/assets/icons/telegram.svg" />
+          </a>
+          <a href="https://vk.com/luverance" target="_blank">
+            {" "}
+            <img src="/src/assets/icons/vkontakte.svg" />
+          </a>
+          <a href="https://www.youtube.com/@Luverance" target="_blank">
+            {" "}
+            <img src="/src/assets/icons/vkontakte.svg" />
+          </a>
+        </div>
       </div>
     </footer>
   );

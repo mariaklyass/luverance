@@ -15,15 +15,19 @@ const CurrentAlbum = () => {
             <img src="/images/album-cover.jpg"></img>
           </div>
         </div>
-        <iframe
-          width="100%"
-          height="550"
-          src="https://music.yandex.ru/iframe/album/24092948"
-        >
-          Слушайте <a href="https://music.yandex.ru/album/24092948">Diade</a> —{" "}
-          <a href="https://music.yandex.ru/artist/8947630">Luverance</a> на
-          Яндекс Музыке
-        </iframe>
+        <div className="current-album_description">
+          <h3>Слушать на всех площадках</h3>
+          <a href="https://band.link/luverance" target="_blank">
+            <button className="btn-icon">
+              <img
+                className="icon"
+                src="/src/assets/icons/bandlink.svg"
+                alt="bandlink"
+              />{" "}
+              bandlink
+            </button>
+          </a>
+        </div>
       </div>
     </section>
   );

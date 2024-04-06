@@ -4,6 +4,7 @@ import App from "./App.jsx";
 import { Provider } from "react-redux";
 import { store } from "../src/store/index.js";
 import { BrowserRouter } from "react-router-dom";
+// import "./fonts/Luverancegolod-Regular.ttf";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

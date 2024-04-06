@@ -64,13 +64,13 @@ const postPreviewVariants = {
   exit: { x: "-100%", opacity: 0, transition },
 };
 
-const PostPreview = ({ id, title, description, imgSrc }) => {
+const PostPreview = ({ id, title, imgSrc }) => {
   return (
     <motion.div className="post-preview" variants={postPreviewVariants}>
       <img className="post-preview__img" src={imgSrc} alt={title} />
       <div className="post-preview__text">
         <h2 className="heading">{title}</h2>
-        <p>{description}</p>
+        {/* <p>{description}</p> */}
         <Link to={`/tracks/post/${id}`}>Подробнее</Link>
       </div>
     </motion.div>
@@ -102,12 +102,28 @@ const Blog = () => {
 
 const Tracks = () => {
   return (
-    <AnimatePresence mode="wait">
-      <Routes>
-        <Route path="/" element={<Blog />} />
-        <Route path="post/:id" element={<Post />} />
-      </Routes>
-    </AnimatePresence>
+    <section className="music">
+      <div className="last-release">
+        <h2 className="release-title">Последний релиз: </h2>
+        <h3 className="release-title">Luverance - Пой </h3>
+        <img
+          className="release-cover"
+          src="/src/assets/releases/poi.jpg"
+          alt="new release"
+        />
+        <a href="https://band.link/luverance" target="_blank">
+          <h2 className="release-title">Слушать на всех площадках </h2>
+        </a>
+        <h2 className="release-title">текст песни</h2>
+      </div>
+
+      <AnimatePresence mode="wait">
+        <Routes>
+          <Route path="/" element={<Blog />} />
+          <Route path="post/:id" element={<Post />} />
+        </Routes>
+      </AnimatePresence>
+    </section>
   );
 };
 

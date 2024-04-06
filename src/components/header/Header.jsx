@@ -46,7 +46,7 @@ const Header = () => {
           {menuOpen ? (
             <img src="/images/icon-close.png" />
           ) : (
-            <img src="/images/burger.jpg" alt="Burger Icon" />
+            <img src="/src/assets/icons/temp.png" alt="Burger Icon" />
           )}
         </div>
       </div>

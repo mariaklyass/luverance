@@ -2,76 +2,98 @@
 .hero {
   position: relative;
   z-index: 1;
-  background: url("/images/hero.jpg") no-repeat center center;
-  background-size: cover;
+  // height: 100dvh;
+
   p {
     font-size: 24px;
   }
-  @media (max-width: 490px) {
-    .hero {
-      background-position: center top;
-    }
-  }
+  // @media (max-width: 490px) {
+  //   height: auto;
+  // }
 }
-
+.hero-bg {
+  background: url("src/assets/images/hero.jpg") no-repeat center center;
+  background-size: cover;
+  opacity: 50%;
+  height: calc(100vh + 162px);
+  width: 100%;
+  position: absolute;
+  top: -160px;
+  left: 0;
+}
 .hero-content {
   padding: 0 150px;
-  @media (max-width: 1024px) {
+  @media (min-width: 300px) {
     padding: 30px;
   }
 }
 .hero-concert {
-  height: 60vh;
-  margin-top: 200px;
-  min-width: 300px;
+  margin-top: 50px;
+  min-width: 260px;
   @media (max-width: 600px) {
     margin-top: 0;
   }
   .hero-concert-content {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    min-width: 300px;
-    margin: 0 auto;
-    padding: 25px 150px;
-    background: rgba(1, 1, 1, 0.7);
-    backdrop-filter: blur(2px);
     display: flex;
     flex-direction: column;
-    gap: 50px;
-    justify-content: space-between;
+    gap: 60px;
+
+    .concerts-title {
+      text-align: center;
+      font-size: 32px;
+    }
+    .nearest-concerts {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      background: rgba(1, 1, 1, 0.7);
+      backdrop-filter: blur(2px);
+      gap: 50px;
+    }
+
+    .last-release {
+      .release-cover {
+        z-index: 2;
+        width: 328px;
+        height: auto;
+      }
+    }
+
     @media (max-width: 1024px) {
-      padding: 25px 50px;
       .concert-info {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
-      }
-      .mgmt {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        gap: 10px;
       }
     }
   }
 }
 .hero-album {
-  height: 80vh;
-  margin-bottom: 140px;
-  @media (max-width: 414px) {
-    height: 100vh;
-  }
-  @media (max-width: 320px) {
-    height: 120vh;
-  }
+  margin-top: 140px;
 }
 .concert-info {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.btns-tickets {
+  display: flex;
+  gap: 10px;
+}
+.btn-icon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  button img {
+    z-index: 2;
+  }
 }
 .wrapper {
   display: grid;
-  gap: 20px;
+  justify-content: center;
+  gap: 43px;
+  padding: 25px 10px;
   @media (max-width: 1024px) {
     text-align: center;
   }
@@ -90,29 +112,58 @@
   backdrop-filter: blur(2px);
   max-width: 300px;
   margin: 0 auto;
+  .additional-info {
+    text-align: center;
+  }
 }
 
 .current-album {
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 40px;
+
   img {
     width: 100%;
     max-width: 500px;
-  }
-  @media (max-width: 1024px) {
-    display: none;
   }
 }
 .section-current-album {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 0 auto;
   margin-top: 40px;
   gap: 40px;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
+
+  .current-album_description {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    // min-width: 200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 30px;
+    background: rgba(217, 217, 217, 0.1);
+    backdrop-filter: blur(2px);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    h3 {
+      font-size: 40px;
+      font-weight: 100;
+      text-align: center;
+      @media (min-width: 320px) {
+        font-size: 20px;
+      }
+    }
+  }
 }
 .framer {
   border-radius: 20px;

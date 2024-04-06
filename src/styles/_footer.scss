@@ -3,6 +3,7 @@
 
 .socialmedia {
   @include flex;
+  gap: 10px;
   svg {
     fill: $light;
     width: 24px;
@@ -13,9 +14,8 @@
   display: flex;
   flex-shrink: 0;
   height: 150px;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin: 10px 40px 10px;
 }
 
 .footer-logo {

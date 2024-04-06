@@ -3,25 +3,32 @@ import React from "react";
 const CurrentConcert = () => {
   return (
     <section className="hero-concert-content">
-      <div className="wrapper">
-        <h2>Ближайший концерт: </h2>
+      <div className="wrapper nearest-concerts">
+        <h2 className="concerts-title">Ближайшие мероприятия: </h2>
         <div className="concert-info">
-          <p>Moscow, 25/01/2024</p>
-          <p>Location, 19:00</p>
-          <a
-            href="https://ticketscloud.com/v1/widgets/common?token=eyJhbGciOiJIUzI1NiIsImlzcyI6InRpY2tldHNjbG91ZC5ydSIsInR5cCI6IkpXVCJ9.eyJwIjoiNjQyYjU1YWM2ZjI1MzM1M2Y5NzdjZmUxIn0.GF6SqLshIgPv6pp5fAJKP4xkZhK-SxpcVkfgl7J-mRQ&lang=ru&event=64a5dad807e2fa361bfb8ea1&s=1&r=1&org=642b55ac6f253353f977cfe1&city=524901&category=592841f8515e35002dead938&tags=592841f8515e35002dead939%2C%D0%9F%D0%BE%D0%BF%2C592841f8515e35002dead93b%2C%D0%A0%D0%BE%D0%BA"
-            target="_blank"
-          >
-            <p> билеты</p>
-          </a>
+          <p>Москва</p>
+          <p>25/04/2024</p>
+          <p>Base</p>
+          <div className="btns-tickets">
+            <button className="btn-primary">
+              <p>билеты</p>
+            </button>
+            <button>
+              <p>Встреча</p>
+            </button>
+          </div>
         </div>
       </div>
-      <div className="wrapper">
-        <h2>Для связи: </h2>
-        <div className="mgmt">
-          <p> Наташа Шавшина</p>
-          <p>mgmt.luverance@gmail.com</p>
-        </div>
+
+      <div className="wrapper last-release">
+        <h2 className="concerts-title">Последний релиз: </h2>
+        <h3 className="concerts-title">Luverance - Пой </h3>
+        <img
+          className="release-cover"
+          src="src/assets/releases/poi.jpg"
+          alt="new release"
+        />
+        <h2 className="concerts-title">Слушать на всех площадках </h2>
       </div>
     </section>
   );

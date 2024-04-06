@@ -1,4 +1,4 @@
-import "../css/style.css";
+import "./css/style.css";
 // import { AnimatePresence } from "framer-motion";
 
 import { Route, Routes } from "react-router-dom";

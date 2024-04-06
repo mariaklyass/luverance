@@ -6,6 +6,7 @@ const Home = () => {
   return (
     <div className="hero">
       <section className="hero-content">
+        <div className="hero-bg" />
         <div className="hero-concert">
           {" "}
           <CurrentConcert />
