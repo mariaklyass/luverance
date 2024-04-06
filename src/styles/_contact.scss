@@ -1,5 +1,5 @@
 .contact-bg {
-  background: url("src/assets/images/logo-img.jpg") no-repeat center center;
+  background: url("/src/assets/images/logo-img.jpg") no-repeat center center;
   background-size: cover;
   opacity: 50%;
   height: calc(100vh);
@@ -8,12 +8,11 @@
   top: -10px;
   left: 0;
 }
+
 .contact-content {
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  // min-width: 260px;
-  // margin: 0 auto;
   padding: 50px;
   background: rgba(1, 1, 1, 0.7);
   backdrop-filter: blur(2px);

@@ -83,7 +83,9 @@
 // };
 
 // export default Merch;
-import { shopImages } from "../../utils/constants";
+import merchOne from "/src/assets/images/shop1.png";
+import merchTwo from "/src/assets/images/shop2.png";
+import merchThree from "/src/assets/images/shop3.png";
 
 const Merch = () => {
   return (
@@ -94,19 +96,19 @@ const Merch = () => {
       <div className="merch-wrapper">
         <div className="merch-item">
           <h3 className="merch-description">Ты мои цветы, я твоя вода</h3>
-          <img className="merch-img" src={shopImages[0]} alt="" />
+          <img className="merch-img" src={merchOne} alt="merch" />
           <p className="merch-price">1600 рублей</p>
         </div>
 
         <div className="merch-item">
-          <h3 className="merch-description">Ты мои цветы, я твоя вода</h3>
-          <img className="merch-img" src={shopImages[1]} alt="" />
+          <h3 className="merch-description">Попробуй переговори мои голоса</h3>
+          <img className="merch-img" src={merchTwo} alt="merch" />
           <p className="merch-price">1600 рублей</p>
         </div>
 
         <div className="merch-item">
-          <h3 className="merch-description">Ты мои цветы, я твоя вода</h3>
-          <img className="merch-img" src={shopImages[2]} alt="" />
+          <h3 className="merch-description">Теплее солнца, холоднее луны</h3>
+          <img className="merch-img" src={merchThree} alt="merch" />
           <p className="merch-price">1600 рублей</p>
         </div>
       </div>

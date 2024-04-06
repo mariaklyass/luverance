@@ -1,5 +1,7 @@
 import React from "react";
-// import SocialMedia from "../socialmedia/SocialMedia";
+import Telegram from "/src/assets/icons/telegram.svg";
+import Vkontakte from "/src/assets/icons/vkontakte.svg";
+import Youtube from "/src/assets/icons/youtube.svg";
 
 const Footer = () => {
   return (
@@ -8,15 +10,15 @@ const Footer = () => {
         {/* <SocialMedia /> */}
         <div className="socialmedia">
           <a href="https://t.me/luverance" target="_blank">
-            <img src="/src/assets/icons/telegram.svg" />
+            <img src={Telegram} alt="telegram link" />
           </a>
           <a href="https://vk.com/luverance" target="_blank">
             {" "}
-            <img src="/src/assets/icons/vkontakte.svg" />
+            <img src={Vkontakte} alt="vkontakte link" />
           </a>
           <a href="https://www.youtube.com/@Luverance" target="_blank">
             {" "}
-            <img src="/src/assets/icons/vkontakte.svg" />
+            <img src={Youtube} alt="youtube link" />
           </a>
         </div>
       </div>

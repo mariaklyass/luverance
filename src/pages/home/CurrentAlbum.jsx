@@ -1,4 +1,6 @@
 import React from "react";
+import Bandlink from "/src/assets/icons/bandlink.svg";
+import Album from "/src/assets/images/album-cover.jpg";
 
 const CurrentAlbum = () => {
   return (
@@ -12,19 +14,14 @@ const CurrentAlbum = () => {
       <div className="section-current-album">
         <div className="current-album">
           <div>
-            <img src="/images/album-cover.jpg"></img>
+            <img src={Album}></img>
           </div>
         </div>
         <div className="current-album_description">
           <h3>Слушать на всех площадках</h3>
           <a href="https://band.link/luverance" target="_blank">
             <button className="btn-icon">
-              <img
-                className="icon"
-                src="/src/assets/icons/bandlink.svg"
-                alt="bandlink"
-              />{" "}
-              bandlink
+              <img className="icon" src={Bandlink} alt="bandlink" /> bandlink
             </button>
           </a>
         </div>

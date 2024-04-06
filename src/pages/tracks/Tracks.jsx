@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes, Link, useParams } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { tracks } from "../../utils/constants";
+import Release from "/src/assets/releases/poi.jpg";
 
 const transition = { duration: 0.5, ease: "easeInOut" };
 const postVariants = {
@@ -19,8 +20,8 @@ const Post = () => {
     return <div>Post not found</div>;
   }
   const { title, link, trackId, albumId, description, text, imgSrc } = post;
-  console.log(trackId);
-  console.log(albumId);
+
+  console.log(imgSrc);
   const structuredText = text
     .split("\n\n")
     .map((paragraph, index) => <p key={index}>{paragraph}</p>);
@@ -106,11 +107,7 @@ const Tracks = () => {
       <div className="last-release">
         <h2 className="release-title">Последний релиз: </h2>
         <h3 className="release-title">Luverance - Пой </h3>
-        <img
-          className="release-cover"
-          src="/src/assets/releases/poi.jpg"
-          alt="new release"
-        />
+        <img className="release-cover" src={Release} alt="new release" />
         <a href="https://band.link/luverance" target="_blank">
           <h2 className="release-title">Слушать на всех площадках </h2>
         </a>

@@ -1,18 +1,13 @@
-//initial for 1440px
 .hero {
   position: relative;
   z-index: 1;
-  // height: 100dvh;
 
   p {
     font-size: 24px;
   }
-  // @media (max-width: 490px) {
-  //   height: auto;
-  // }
 }
 .hero-bg {
-  background: url("src/assets/images/hero.jpg") no-repeat center center;
+  background: url("/src/assets/images/hero.jpg") no-repeat center center;
   background-size: cover;
   opacity: 50%;
   height: calc(100vh + 162px);
@@ -144,7 +139,6 @@
   .current-album_description {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    // min-width: 200px;
     width: 100%;
     margin: 0 auto;
     padding: 20px 30px;
