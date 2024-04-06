@@ -31,7 +31,7 @@ const CurrentConcert = () => {
         <h2 className="concerts-title">Последний релиз: </h2>
         <h3 className="concerts-title">Luverance - Пой </h3>
         <img className="release-cover" src={Release} alt="new release" />
-        <a href="https://band.link/luverance" target="_blank">
+        <a href="https://band.link/luverancepoi" target="_blank">
           <h2 className="concerts-title">Слушать на всех площадках </h2>
         </a>
       </div>

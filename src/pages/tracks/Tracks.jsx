@@ -108,7 +108,7 @@ const Tracks = () => {
         <h2 className="release-title">Последний релиз: </h2>
         <h3 className="release-title">Luverance - Пой </h3>
         <img className="release-cover" src={Release} alt="new release" />
-        <a href="https://band.link/luverance" target="_blank">
+        <a href="https://band.link/luverancepoi" target="_blank">
           <h2 className="release-title">Слушать на всех площадках </h2>
         </a>
         <h2 className="release-title">текст песни</h2>
